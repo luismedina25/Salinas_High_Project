@@ -12,7 +12,7 @@
 ### DATA ###
 ############
 
-data = read.csv( "/Users/luis/Documents/Capstone/Salinas High School/Data (Game)/SHS_HomeGame_20200207.csv", header=FALSE )[,1]
+data = read.csv( "SHS_HomeGame_20200207.csv", header=FALSE )[,1]
 data = gsub( "\t", "", data )
 data = as.character(data)
 data = data[ which( data != "" ) ]
@@ -76,7 +76,7 @@ data.player = data.player[ order(player), ]
 data.player
 
 
-pdf( "/Users/luis/Documents/Capstone/Salinas High School/Data (Game)/Graphs/SHS_HomeGame_20200207.pdf", height=8, width=14 )
+pdf( "/Users/luis/Documents/Capstone/Salinas High School/Salinas_High_Project/SHS_HomeGame_20200207.pdf", height=8, width=14 )
 
 par( mfrow=c(2,2) )
 
@@ -117,8 +117,6 @@ mtext( adj=.5, at=bp[2], side=1, line=-2, text=paste( prob.g, "%", sep="" ), fon
 legend( "topright", legend=c("Cowboys","Guest"), fill=c("gold","orange"), bty="n" )
 
 dev.off()
-
-data.player
 
 ### NEXT GOAL
 
