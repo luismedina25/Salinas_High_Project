@@ -31,12 +31,13 @@ shinyUI(pageWithSidebar(
     # Show a plot of the generated distribution
     mainPanel(
       tabsetPanel(
-        tabPanel("Content", tableOutput('contents')),
+        tabPanel("Content", tableOutput('contents'))
         #tabPanel("Ball Touch (Individual)", plotOutput('ball_touch_individual')),
         #tabPanel("Successful Pass (Individual)", plotOutput('success_pass_individual')),
         #tabPanel("Ball Touch (Team)", plotOutput('ball_touch_team')),
         #tabPanel("Successful Pass (Team)", plotOutput('successful_pass_team')),
-    ),
-    ),
+    )
+    )
   
-),
+))
+
